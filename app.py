@@ -97,7 +97,7 @@ hr { border-color:#1e1e35; }
 """, unsafe_allow_html=True)
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CHECKPOINT_PATH = "checkpoints/"
+CHECKPOINT_PATH = ""
 BG        = "#09090f"
 CARD      = "#0f0f1a"
 GRID      = "#1e1e35"
