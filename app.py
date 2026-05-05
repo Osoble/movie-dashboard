@@ -572,7 +572,7 @@ elif page == "Model Comparison":
                 r=vals + [vals[0]], theta=cats + [cats[0]],
                 fill="toself", name=row["Model"],
                 line=dict(color=palette[i % len(palette)], width=2),
-                fillcolor=palette[i % len(palette)].replace(")", ",0.08)").replace("rgb","rgba") if "rgb" in palette[i % len(palette)] else palette[i % len(palette)] + "15",
+                fillcolor="rgba(100,100,200,0.08)",
                 opacity=0.85
             ))
         fig.update_layout(
