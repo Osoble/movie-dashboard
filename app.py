@@ -9,7 +9,6 @@ from plotly.subplots import make_subplots
 
 st.set_page_config(
     page_title="CineAI - Movie Recommender",
-    page_icon="🎬",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -97,7 +96,7 @@ hr { border-color:#1e1e35; }
 """, unsafe_allow_html=True)
 
 # ── Constants ──────────────────────────────────────────────────────────────────
-CHECKPOINT_PATH = ""
+CHECKPOINT_PATH = "checkpoints/"
 BG        = "#09090f"
 CARD      = "#0f0f1a"
 GRID      = "#1e1e35"
@@ -201,8 +200,8 @@ if page == "Home":
     </div>""", unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
- stats = [("10M+", "Training Ratings"), ("62K", "Unique Movies"),
-         ("162K", "Users"), ("0.8551", "Best RMSE (XGBoost)")]
+    stats = [("10M+", "Training Ratings"), ("62K", "Unique Movies"),
+             ("162K", "Users"), ("0.8551", "Best RMSE (XGBoost)")]
     for col, (num, lbl) in zip([c1,c2,c3,c4], stats):
         with col:
             st.markdown(f"<div class='stat-card'><div class='num'>{num}</div><div class='lbl'>{lbl}</div></div>", unsafe_allow_html=True)
