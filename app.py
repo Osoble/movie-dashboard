@@ -201,8 +201,8 @@ if page == "Home":
     </div>""", unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
-    stats = [("10,000,038", "Training Ratings"), ("62,423", "Unique Movies"),
-             ("162,541", "Users"), ("0.8551", "Best RMSE (XGBoost)")]
+ stats = [("10M+", "Training Ratings"), ("62K", "Unique Movies"),
+         ("162K", "Users"), ("0.8551", "Best RMSE (XGBoost)")]
     for col, (num, lbl) in zip([c1,c2,c3,c4], stats):
         with col:
             st.markdown(f"<div class='stat-card'><div class='num'>{num}</div><div class='lbl'>{lbl}</div></div>", unsafe_allow_html=True)
